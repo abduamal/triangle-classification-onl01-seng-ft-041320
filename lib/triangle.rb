@@ -6,7 +6,7 @@ class Triangle
     @y = y
     @z = z
   end
-  def kind()
+  def kind
     if (@x <= 0) || (@y <= 0) || (@z <= 0)
       raise TriangleError
     elsif (@x+@y <= @z) || (@x+@z <= @y) || (@y+@z <= @x)
