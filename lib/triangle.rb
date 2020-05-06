@@ -18,8 +18,8 @@ class Triangle
         :isosceles
       elsif (@x != @y) && (@y != @z) && (@x != @z)
         :scalene
-      end
     end
+  end
   class TriangleError < StandardError
     # triangle error code
   end
