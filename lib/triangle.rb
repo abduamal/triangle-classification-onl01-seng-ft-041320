@@ -11,13 +11,13 @@ class Triangle
       raise TriangleError
     elsif (@x+@y <= @z) || (@x+@z <= @y) || (@y+@z <= @x)
       raise TriangleError
-    else
-      if (@x == @y) && (@y == @z)
-        :equilateral
-      elsif (@x == @y) || (@y == @z) || (@x == @z)
-        :isosceles
-      elsif (@x != @y) && (@y != @z) && (@x != @z)
-        :scalene
+    end
+    if (@x == @y) && (@y == @z)
+      :equilateral
+    elsif (@x == @y) || (@y == @z) || (@x == @z)
+      :isosceles
+    else (@x != @y) && (@y != @z) && (@x != @z)
+      :scalene
     end
   end
   class TriangleError < StandardError
